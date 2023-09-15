@@ -1,19 +1,19 @@
 {
   "products": [
     {
-      "id": "001",
-      "name": "Chiva cola",
-      "description": "La mejor soda que existe"
+      "id": "YMvzTg",
+      "name": "Hamburguesa",
+      "description": "Rica"
     },
     {
-      "id": "003",
-      "name": "Burritos",
-      "description": "Los burritos de la dona del oxxo"
-    },
-    {
-      "id": "004",
+      "id": "P85Gao",
       "name": "Pizza",
-      "description": "Rica comida"
+      "description": "Hello"
+    },
+    {
+      "id": "1f2VAB",
+      "name": "Helado",
+      "description": "Frio"
     }
   ]
 }
