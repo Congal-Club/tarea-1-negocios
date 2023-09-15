@@ -1,19 +1,19 @@
 {
   "products": [
     {
-      "id": "001",
-      "name": "Chiva cola",
-      "description": "La mejor soda que existe"
-    },
-    {
-      "id": "002",
+      "id": "cgklVa",
       "name": "Cerveza Napoli",
-      "description": "Nueva Cerveza"
+      "description": "La mejor cerveza italiana"
     },
     {
-      "id": "003",
+      "id": "renZWL",
       "name": "Burritos",
-      "description": "Los burritos de la señora de afuera del ITA"
+      "description": "Burritos belicos"
+    },
+    {
+      "id": "uLwzQd",
+      "name": "Chiva Cola",
+      "description": "La mejor soda del mundo"
     }
   ]
 }
