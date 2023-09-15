@@ -8,7 +8,12 @@
     {
       "id": "002",
       "name": "Cerveza Napoli",
-      "description": "La mejor cerveza que existe"
+      "description": "Nueva Cerveza"
+    },
+    {
+      "id": "003",
+      "name": "Burritos",
+      "description": "Los burritos de la señora de afuera del ITA"
     }
   ]
 }
