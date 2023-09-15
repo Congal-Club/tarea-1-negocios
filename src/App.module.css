@@ -39,3 +39,110 @@
   font-size: 1.5rem;
   text-align: center;
 }
+
+.formContent {
+  padding: 1rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+  gap: 0.25rem;
+  align-items: start;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.label {
+  font-size: 1rem;
+  color: #25292e;
+}
+
+.input {
+  display: inline-block;
+  width: 100%;
+  padding: 0.5rem;
+  outline: none;
+  border: 1px solid #777;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  color: inherit;
+  font-family: system-ui;
+  resize: vertical;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: #09f;
+  color: #fff;
+  font-size: 1rem;
+  box-shadow: 0 3px 2px rgba(0, 0, 0, 0.35);
+  transition: all 0.2s ease-in-out;
+}
+
+.button:hover {
+  cursor: pointer;
+  transform: translateY(-1.5px);
+  box-shadow: 0 5px 2px rgba(0, 0, 0, 0.35);
+}
+
+.tableContainer {
+  flex: 1;
+}
+
+.table {
+  width: 100%;
+  margin-top: 1rem;
+  border: 1px solid #777;
+  border-radius: 0.5rem;
+  border-collapse: collapse;
+  overflow: hidden;
+  box-shadow: 0 3px 2px rgba(0, 0, 0, 0.2);
+}
+
+.table thead {
+  background-color: #09f;
+  color: #fff;
+  font-weight: bold;
+}
+
+.table td, .table th {
+  border: 1px solid #777;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.table tr:nth-child(even) {
+  background-color: #f1f1f1;
+}
+
+.iconButton {
+  padding: 0.25rem;
+  border: none;
+  border-radius: 0.25rem;
+  background-color: #f7f7f7;
+  font-weight: bold;
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.35);
+}
+
+.iconButton:hover {
+  cursor: pointer;
+  box-shadow: 0 3px 2px rgba(0, 0, 0, 0.35);
+  transform: translateY(-1.5px);
+}
+
+.actionEditIcon {
+  height: 30px;
+  width: 30px;
+  fill: orange;
+}
+
+.actionDeleteIcon {
+  height: 30px;
+  width: 30px;
+  fill: crimson;
+}
