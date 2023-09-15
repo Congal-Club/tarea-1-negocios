@@ -1,0 +1,15 @@
+{
+    "products": [
+        {
+            "id": "001", 
+            "name": "Chiva cola",
+            "description": "La mejor soda que existe"
+        },
+        {
+            "id": "002", 
+            "name": "Cerveza Napoli",
+            "description": "La cerveza soda que existe"
+        }
+
+    ]
+}

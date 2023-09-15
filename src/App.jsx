@@ -1,9 +1,15 @@
 import styles from './App.module.css'
+
 import { useState } from 'react'
+import {ReactComponent as Delete} from './delete.svg'
+import {ReactComponent as Edit} from './edit.svg'
 
 export default function App() {
     const [tittle, setTittle] = useState('Agregar Producto')
     const [isAdding, setIsAdding] = useState(true)
+    const [products, setProducts] = useState([
+        
+    ])
     return (
         <main className={styles.main}>
             <h1 className={styles.tittle}>{tittle}</h1>
@@ -12,28 +18,59 @@ export default function App() {
                 <form className={styles.form}>
                     <h3 className={styles.formTitle}>Informacion del Producto</h3>
 
-                    <div>
-
-                    <div>
-                        <label htmlFor='product'>Product</label>
-                        <input type='text' id='product' placeholder='Producto...'/>
+                    <div className={styles.formContent}>
+                    <div className={styles.formGroup}>
+                        <label className={styles.label} htmlFor='product'>Product</label>
+                        <input className={styles.input} type='text' id='product' placeholder='Producto...'/>
+                    </div>
+                    <div className={styles.formGroup}>
+                        <label className={styles.label} htmlFor=''> Descripcion </label>
+                        <textarea  className={styles.input} placeholder='Descrpcion...'/>
                     </div>
 
-                    <div>
-                        <label htmlFor=''> Descripcion </label>
-                        <textarea placeholder='Descrpcion...'/>
-                    </div>
-                    <button>
+                    <button className={styles.button}>
                         {isAdding ? 'Agregar' : 'Editar'}
                     </button>
                     </div>
                 </form>
             </section>
 
-            <section>
+            <section className={styles.tableContainer}>
                 <h3>Productos</h3>
+
+                <table className={styles.table}>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Descripcion</th>
+                            <th>Editar</th>
+                            <th>Borrar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {
+                            products.map(product =>(
+                                <tr key={product.id}>
+                                    <td>{product.id}</td>
+                                    <td>{product.name}</td>
+                                    <td>{product.description}</td>
+                                    <td>
+                                        <button className={styles.iconButton}> 
+                                        <Edit className={styles.actionEditIcon}/>
+                                        </button>
+                                    </td>
+                                    <td>
+                                        <button className={styles.iconButton}>
+                                            <Delete className={styles.actionDeleteIcon}/>
+                                        </button>
+                                    </td>
+                                </tr>
+                            ))}
+                    </tbody>
+                </table>
             </section>
-            </div>
+         </div>
         </main>
     )
 }
