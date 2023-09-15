@@ -1,14 +1,19 @@
 {
-    "products": [
-        {
-            "id": "001", 
-            "name": "Chiva cola", 
-            "description": "La mejor soda que existe"
-          },
-          {
-            "id": "002", 
-            "name": "Cerveza Napoli", 
-            "description": "La mejor cerveza que existe"
-          }
-    ]
+  "products": [
+    {
+      "id": "001",
+      "name": "Chiva cola",
+      "description": "La mejor soda que existe"
+    },
+    {
+      "id": "003",
+      "name": "Burritos",
+      "description": "Los burritos de la dona del oxxo"
+    },
+    {
+      "id": "004",
+      "name": "Pizza",
+      "description": "Rica comida"
+    }
+  ]
 }
