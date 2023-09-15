@@ -1,14 +1,9 @@
 {
-    "products": [
-        {
-            "id": "001",
-            "name": "Chiva Cola",
-            "description": "La mejor soda que existe"
-          },
-          {
-            "id": "002",
-            "name": "Consolador",
-            "description": "El mejor consolador que existe"
-          }
-    ]
+  "products": [
+    {
+      "id": "001",
+      "name": "Chiva Cola",
+      "description": "La mejor soda "
+    }
+  ]
 }
