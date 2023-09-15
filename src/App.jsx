@@ -1,9 +1,9 @@
 import styles from './App.module.css'
-
 import { useState, useEffect } from 'react'
-import {ReactComponent as Delete} from './delete.svg'
-import {ReactComponent as Edit} from './edit.svg'
-
+import Form from './Components/Form'
+import TableOfProducts from './Components/TableOfProducts'
+import {addProduct, deleteProduct, getProducts, updateProduct} from './services/product-services'
+import { generateId } from './utils/id'
 export default function App() {
     const [tittle, setTittle] = useState('Agregar Producto')
     const [isAdding, setIsAdding] = useState(true)
@@ -14,14 +14,8 @@ export default function App() {
         const controller = new AbortController()
 
         const fetchProducts = async () => {
-            try {
-                const response = await fetch('http://localhost:3000/products')
-                const data = await response.json()
-
-                setProducts(data)
-            } catch (error) {
-                console.log(error)
-            }
+            const data = await getProducts()
+            setProducts(data)
         }
         
         fetchProducts()
@@ -39,32 +33,15 @@ export default function App() {
 
         if (isAdding) {
             const productToAdd = {
-                id: `00${products.length + 1}`,
+                id: generateId(6),
                 name: data.product,
                 description: data.description
             }
-            console.log(productToAdd)
-            await fetch('http://localhost:3000/products', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(productToAdd)
-         })
+            await addProduct(productToAdd)
 
          setProducts((prevProducts) => [...prevProducts, productToAdd])
         }else {
-            await fetch (`http://localhost:3000/products/${productEditing.id}`,{
-                method: 'PUT',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    id: productEditing.id,
-                    name: data.product,
-                    description: data.description
-          })
-         })
+            await updateProduct(productEditing, data)
 
          setProducts((prevProducts) => prevProducts.map(product => {
             if (product.id === productEditing.id){
@@ -80,6 +57,7 @@ export default function App() {
 
          setIsAdding(true)
          setProductEditing(null)
+         setTittle('Agregar Producto')
         }
 
         event.target.reset()
@@ -88,12 +66,11 @@ export default function App() {
     const handleEdit = (product) => {
         setIsAdding(false)
         setProductEditing(product)
+        setTittle('Editar Producto')
     }
 
     const handleDelete = async (product) =>{
-        await fetch(`http://localhost:3000/products/${product.id}`,{
-            method: 'DELETE'
-     })
+        await deleteProduct(product)
 
      setProducts((prevProducts) => prevProducts.filter(
         p => p.id !== product.id
@@ -106,71 +83,21 @@ export default function App() {
             <h1 className={styles.tittle}>{tittle}</h1>
             <div className={styles.container}>
             <section className={styles.formContainer}>
-                <form className={styles.form} onSubmit={handleSubmit}>
-                    <h3 className={styles.formTitle}>Informacion del Producto</h3>
-
-                    <div className={styles.formContent}>
-                    <div className={styles.formGroup}>
-                        <label className={styles.label} htmlFor='product'>Product</label>
-                        <input 
-                          className={styles.input} 
-                          type='text' id='product' 
-                          name='product' 
-                          placeholder='Producto...'
-                          defaultValue={isAdding ? '' : productEditing.name}
-                        />
-                    </div>
-                    <div className={styles.formGroup}>
-                        <label className={styles.label} htmlFor=''> Descripcion </label>
-                        <textarea  
-                          className={styles.input} 
-                          name='description' 
-                          placeholder='Descrpcion...'
-                          defaultValue={isAdding ? '' : productEditing.description}
-                        />
-                    </div>
-
-                    <button className={styles.button}>
-                        {isAdding ? 'Agregar' : 'Editar'}
-                    </button>
-                    </div>
-                </form>
+                <Form
+                  handleSubmit={handleSubmit} 
+                  isAdding={isAdding}
+                  productEditing={productEditing}
+                />  
             </section>
 
             <section className={styles.tableContainer}>
                 <h3>Productos</h3>
 
-                <table className={styles.table}>
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Nombre</th>
-                            <th>Descripcion</th>
-                            <th>Editar</th>
-                            <th>Borrar</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {
-                            products.map(product =>(
-                                <tr key={product.id}>
-                                    <td>{product.id}</td>
-                                    <td>{product.name}</td>
-                                    <td>{product.description}</td>
-                                    <td>
-                                        <button className={styles.iconButton} onClick ={() => handleEdit(product)}> 
-                                        <Edit className={styles.actionEditIcon}/>
-                                        </button>
-                                    </td>
-                                    <td>
-                                        <button className={styles.iconButton} onClick={() => handleDelete(product)}>
-                                            <Delete className={styles.actionDeleteIcon}/>
-                                        </button>
-                                    </td>
-                                </tr>
-                            ))}
-                    </tbody>
-                </table>
+                <TableOfProducts
+                products={products}
+                handleDelete={handleDelete}
+                handleEdit={handleEdit}
+                />
             </section>
          </div>
         </main>

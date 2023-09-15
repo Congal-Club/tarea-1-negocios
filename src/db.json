@@ -1,19 +1,14 @@
 {
   "products": [
     {
-      "id": "001",
-      "name": "Chiva cola",
-      "description": "La mejor soda que existe"
+      "id": "3vJPS7",
+      "name": "Coca-Cola",
+      "description": "Sin azucar"
     },
     {
-      "id": "002",
-      "name": "Cerveza Napoli",
-      "description": "Nueva Cerveza"
-    },
-    {
-      "id": "003",
-      "name": "Burritos",
-      "description": "Burritos de la señora de afuera del ITA"
+      "id": "AakP2j",
+      "name": "Fanta",
+      "description": "Sabor Naranja"
     }
   ]
 }
