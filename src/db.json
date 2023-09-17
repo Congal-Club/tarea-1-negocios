@@ -1,0 +1,19 @@
+{
+  "products": [
+    {
+      "id": "cgklVa",
+      "name": "Cerveza Napoli",
+      "description": "La mejor cerveza italiana"
+    },
+    {
+      "id": "renZWL",
+      "name": "Burritos",
+      "description": "Burritos belicos"
+    },
+    {
+      "id": "uLwzQd",
+      "name": "Chiva Cola",
+      "description": "La mejor soda del mundo"
+    }
+  ]
+}

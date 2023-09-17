@@ -22,20 +22,6 @@
   flex-basis: 40%;
 }
 
-.form {
-  display: inline-block;
-  width: 100%;
-  border: 1px solid #777;
-  border-radius: 0.5rem;
-  box-shadow: 0 3px 2px rgba(0, 0, 0, 0.2);
-}
-
-.formTitle {
-  padding: 1rem;
-  border-top-right-radius: 0.5rem;
-  border-top-left-radius: 0.5rem;
-  background-color: #09f;
-  color: #fff;
-  font-size: 1.5rem;
-  text-align: center;
+.tableContainer {
+  flex: 1;
 }
