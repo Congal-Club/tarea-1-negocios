@@ -1,109 +1,105 @@
 import styles from './App.module.css'
-
 import { useState, useEffect } from 'react'
-
-import Form from './components/Form'
-import TableOfProducts from './components/TableOfProducts'
-import { addProduct, deleteProduct, getProducts, updateProduct } from './services/product-service'
+import Form from './Components/Form'
+import TableOfProducts from './Components/TableOfProducts'
+import {addProduct, deleteProduct, getProducts, updateProduct} from './services/product-services'
 import { generateId } from './utils/id'
-
 export default function App() {
-  const [title, setTitle] = useState('Agregar Producto')
-  const [isAdding, setIsAdding] = useState(true)
-  const [products, setProducts] = useState([])
-  const [productEditing, setProductEditing] = useState(null)
+    const [tittle, setTittle] = useState('Agregar Producto')
+    const [isAdding, setIsAdding] = useState(true)
+    const [products, setProducts] = useState([])
+    const [productEditing, setProductEditing] = useState(null)
 
-  useEffect(() => {
-    const controller = new AbortController()
+    useEffect(() => {
+        const controller = new AbortController()
 
-    const fetchProducts = async () => {
-      const data = await getProducts()
-      setProducts(data)
-    }
+        const fetchProducts = async () => {
+            const data = await getProducts()
+            setProducts(data)
+        }
+        
+        fetchProducts()
 
-    fetchProducts()
+        return () => {
+            controller.abort()
+        }
+    }, [])
 
-    return () => {
-      controller.abort()
-    }
-  }, [])
+    const handleSubmit = async(event) => {
+        event.preventDefault()
 
-  const handleSubmit = async (event) => {
-    event.preventDefault()
+        const formData = new FormData(event.target)
+        const data = Object.fromEntries(formData)
 
-    const formData = new FormData(event.target)
-    const data = Object.fromEntries(formData)
+        if (isAdding) {
+            const productToAdd = {
+                id: generateId(6),
+                name: data.product,
+                description: data.description
+            }
+            await addProduct(productToAdd)
 
-    if (isAdding) {
-      const productToAdd = {
-        id: generateId(6),
-        name: data.product,
-        description: data.description
-      }
+         setProducts((prevProducts) => [...prevProducts, productToAdd])
+        }else {
+            await updateProduct(productEditing, data)
 
-      await addProduct(productToAdd)
+         setProducts((prevProducts) => prevProducts.map(product => {
+            if (product.id === productEditing.id){
+             return{
+                    ...product,
+                    name: data.product,
+                    description: data.description
+             }
+            }
+            
+            return product
+         }))
 
-      setProducts((prevProducts) => [...prevProducts, productToAdd])
-    } else {
-      await updateProduct(productEditing, data)
-
-      setProducts((prevProducts) => prevProducts.map(product => {
-        if (product.id === productEditing.id) {
-          return {
-            ...product,
-            name: data.product,
-            description: data.description
-          }
+         setIsAdding(true)
+         setProductEditing(null)
+         setTittle('Agregar Producto')
         }
 
-        return product
-      }))
-
-      setIsAdding(true)
-      setProductEditing(null)
-      setTitle('Agregar Producto')
+        event.target.reset()
     }
 
-    event.target.reset()
-  }
+    const handleEdit = (product) => {
+        setIsAdding(false)
+        setProductEditing(product)
+        setTittle('Editar Producto')
+    }
 
-  const handleEdit = (product) => {
-    setIsAdding(false)
-    setProductEditing(product)
-    setTitle('Editar Producto')
-  }
+    const handleDelete = async (product) =>{
+        await deleteProduct(product)
 
-  const handleDelete = async (product) => {
-    await deleteProduct(product)
+     setProducts((prevProducts) => prevProducts.filter(
+        p => p.id !== product.id
+     ))
+    
+    }
 
-    setProducts((prevProducts) => prevProducts.filter(
-      p => p.id !== product.id
-    ))
-  }
+    return (
+        <main className={styles.main}>
+            <h1 className={styles.tittle}>{tittle}</h1>
+            <div className={styles.container}>
+            <section className={styles.formContainer}>
+                <Form
+                  handleSubmit={handleSubmit} 
+                  isAdding={isAdding}
+                  productEditing={productEditing}
+                />  
+            </section>
 
-  return (
-    <main className={styles.main}>
-      <h1 className={styles.title}>{title}</h1>
+            <section className={styles.tableContainer}>
+                <h3>Productos</h3>
 
-      <div className={styles.container}>
-        <section className={styles.formContainer}>
-          <Form 
-            handleSubmit={handleSubmit}
-            isAdding={isAdding}
-            productEditing={productEditing}
-          />
-        </section>
-
-        <section className={styles.tableContainer}>
-          <h3>Productos</h3>
-
-          <TableOfProducts
-            products={products}
-            handleDelete={handleDelete}
-            handleEdit={handleEdit}
-          />
-        </section>
-      </div>
-    </main>
-  )
+                <TableOfProducts
+                products={products}
+                handleDelete={handleDelete}
+                handleEdit={handleEdit}
+                />
+            </section>
+         </div>
+        </main>
+    )
 }

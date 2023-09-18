@@ -1,27 +1,28 @@
 .main {
-  width: 90%;
-  max-width: 960px;
-  margin: 2rem auto;
+    width: 90%;
+    max-width: 960px;
+    margin: 2rem auto;
 }
 
-.title {
-  margin-bottom: 2rem;
-  font-size: 2rem;
-  color: #25292e;
+.tittle {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: #25292e;
 }
 
-.container {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  align-items: start;
-  gap: 2rem;
+.container{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: start;
+    gap: 2rem;
 }
 
 .formContainer {
-  flex-basis: 40%;
+    flex-basis: 40%;
 }
 
-.tableContainer {
-  flex: 1;
+.tableContainer{
+    flex: 1;
 }
+

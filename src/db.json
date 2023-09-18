@@ -1,19 +1,14 @@
 {
   "products": [
     {
-      "id": "cgklVa",
-      "name": "Cerveza Napoli",
-      "description": "La mejor cerveza italiana"
+      "id": "3vJPS7",
+      "name": "Coca-Cola",
+      "description": "Sin azucar"
     },
     {
-      "id": "renZWL",
-      "name": "Burritos",
-      "description": "Burritos belicos"
-    },
-    {
-      "id": "uLwzQd",
-      "name": "Chiva Cola",
-      "description": "La mejor soda del mundo"
+      "id": "AakP2j",
+      "name": "Fanta",
+      "description": "Sabor Naranja"
     }
   ]
 }
