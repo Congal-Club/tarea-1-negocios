@@ -1,19 +1,14 @@
 {
   "products": [
     {
-      "id": "cgklVa",
-      "name": "Cerveza Napoli",
-      "description": "La mejor cerveza italiana"
+      "id": "001",
+      "name": "Chiva cola",
+      "description": "refresco"
     },
     {
-      "id": "renZWL",
-      "name": "Burritos",
-      "description": "Burritos belicos"
-    },
-    {
-      "id": "uLwzQd",
-      "name": "Chiva Cola",
-      "description": "La mejor soda del mundo"
+      "id": "Ot2TvF",
+      "name": "Chiva cola",
+      "description": "refresco"
     }
   ]
 }
