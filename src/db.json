@@ -1,14 +1,19 @@
 {
   "products": [
     {
-      "id": "3vJPS7",
-      "name": "Coca-Cola",
-      "description": "Sin azucar"
+      "id": "001",
+      "name": "Burritos",
+      "description": "Burritos de la señora"
     },
     {
-      "id": "AakP2j",
-      "name": "Fanta",
-      "description": "Sabor Naranja"
+      "id": "P85Gao",
+      "name": "Pizza",
+      "description": "Hello"
+    },
+    {
+      "id": "1f2VAB",
+      "name": "Helado",
+      "description": "Frio"
     }
   ]
 }
