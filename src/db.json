@@ -1,19 +1,19 @@
 {
   "products": [
     {
-      "id": "cgklVa",
-      "name": "Cerveza Napoli",
-      "description": "La mejor cerveza italiana"
+      "id": "YMvzTg",
+      "name": "Hamburguesa",
+      "description": "Rica"
     },
     {
-      "id": "renZWL",
-      "name": "Burritos",
-      "description": "Burritos belicos"
+      "id": "P85Gao",
+      "name": "Pizza",
+      "description": "Hello"
     },
     {
-      "id": "uLwzQd",
-      "name": "Chiva Cola",
-      "description": "La mejor soda del mundo"
+      "id": "1f2VAB",
+      "name": "Helado",
+      "description": "Frio"
     }
   ]
 }
