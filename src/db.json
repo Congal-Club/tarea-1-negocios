@@ -2,13 +2,18 @@
   "products": [
     {
       "id": "001",
-      "name": "Chiva cola",
-      "description": "refresco"
+      "name": "Burritos",
+      "description": "Burritos de la señora"
     },
     {
-      "id": "Ot2TvF",
-      "name": "Chiva cola",
-      "description": "refresco"
+      "id": "P85Gao",
+      "name": "Pizza",
+      "description": "Hello"
+    },
+    {
+      "id": "1f2VAB",
+      "name": "Helado",
+      "description": "Frio"
     }
   ]
 }

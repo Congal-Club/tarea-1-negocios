@@ -10,8 +10,17 @@
     "start": "concurrently \"npm run dev\" \"npm run server\""
 
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Congal-Club/tarea-1-negocios.git"
+  },
+  "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Congal-Club/tarea-1-negocios/issues"
+  },
+  "homepage": "https://github.com/Congal-Club/tarea-1-negocios#readme",
   "dependencies": {
     "@vitejs/plugin-react-swc": "^3.3.2",
     "concurrently": "^8.2.1",
