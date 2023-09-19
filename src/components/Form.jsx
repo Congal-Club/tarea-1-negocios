@@ -1,4 +1,4 @@
-import styles from './Form.module.css'
+import styles from "./Form.module.css"
 
 export default function Form({ handleSubmit, isAdding, productEditing}) {
   return (
