@@ -33,3 +33,4 @@ export default function Form({ handleSubmit, isAdding, productEditing}) {
                 </form>
   )
 }
+
