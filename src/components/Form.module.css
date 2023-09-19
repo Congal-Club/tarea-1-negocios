@@ -3,22 +3,25 @@
     width: 100%;
     border: 1px solid #777;
     border-radius: 0.5rem;
-    box-shadow: 0 3px 2px rgba(0,0,0,0.2);
-
+    box-shadow: 0 3px 2px rgba(0, 0, 0, 0.2);
 }
+
 .formTitle{
-    padding: 1rem; 
+    padding: 1rem;
+    border-top-right-radius: 0.5rem;
+    border-top-left-radius: 0.5rem;
     background-color: #09f;
     color: #fff;
     font-size: 1.5rem;
     text-align: center;
-    border-top-right-radius: 0.5rem;
-    border-top-left-radius: 0.5rem;
+
 }
+
 .formContent{
     padding: 1rem;
 }
-.formGroup{
+
+.formGroup {
     display: flex;
     flex-flow: column nowrap;
     width: 100%;
@@ -27,10 +30,13 @@
     justify-content: center;
     margin-bottom: 1rem;
 }
+
 .label{
     font-size: 1rem;
     color: #25292e;
+
 }
+
 .input{
     display: inline-block;
     width: 100%;
@@ -43,7 +49,8 @@
     font-family: system-ui;
     resize: vertical;
 }
-.button{
+
+.button {
     display: inline-block;
     padding: 0.5rem 1rem;
     border: none;
@@ -51,11 +58,12 @@
     background-color: #09f;
     color: #fff;
     font-size: 1rem;
-    box-shadow: 0 3px 2px rgba(0,0,0,0.35);
+    box-shadow: 0 3px 2px rgba(0, 0, 0, 0.35);
     transition: all 0.2s ease-in-out;
 }
+
 .button:hover{
     cursor: pointer;
     transform: translateY(-1.5px);
-    box-shadow: 0 5px 2px rgba(0,0,0,0.35);
+    box-shadow: 0 5px 2px rgba(0, 0, 0, 0.35);
 }

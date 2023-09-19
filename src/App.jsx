@@ -29,7 +29,7 @@ export default function App() {
   },[]);
 
   const handleSubmit = async (event) =>{
-    event.preventDefault(); 
+    event.preventDefault()
 
     const formData = new FormData(event.target); 
     const data = Object.fromEntries(formData); 
@@ -40,29 +40,28 @@ export default function App() {
         name: data.product,
         description: data.description
       }
-     await addProduct(productToAdd); 
 
-      setProducts((prevProducts)=>[...prevProducts,productToAdd]);
-    }else{
-      await updateProduct(productEditing,data)
+      await addProduct(productToAdd)
 
-    setProducts((prevProducts)=>prevProducts.map(product=>{
-      if(product.id===productEditing.id){
-        return{
-          ...product, 
-          name: data.product, 
-          description: data.description
+      setProducts((prevProducts) =>[...prevProducts, productToAdd])
+    } else {
+      await updateProduct(productEditing, data)
+      setProducts((prevProducts) => prevProducts.map(product => {
+        if (product.id === productEditing.id) {
+          return {
+            ...product,
+            name: data.product,
+            description: data.description
+          }
         }
-      }
+        return product
+      }))
+      setIsAdding(true)
+      setProductEditing(null)
+      setTitle('Agregar Producto')
+    }
+    event.target.reset()
 
-
-      return product;
-    }));
-    setIsAdding(true); 
-    setProductEditing(null);
-    setTitle("Agregar Producto"); 
-  }
-    event.target.reset(); 
   }
 
   const handleEdit = (product)=>{
@@ -79,7 +78,6 @@ export default function App() {
     ))
     
   }
-
   return (
     <main className={styles.main}>
       <h1 className={styles.title}>{title}</h1>
