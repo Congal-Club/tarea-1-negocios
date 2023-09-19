@@ -1,12 +1,16 @@
 import styles from "./App.module.css";
 
 import { useState, useEffect} from "react";
+
 import Form from "./components/Form";
 import TableOfProducts from "./components/TableOfProducts";
 import { addProduct, deleteProduct, getProducts, updateProduct } from "./services/product-service";
 import { generateId } from "./utiles/id";
 
-
+import Form from "./components/Form";
+import TableOfProducts from "./components/TableOfProducts";
+import { getProducts, addProduct, updateProduct, deleteProduct} from "./services/product-service";
+import {generateId} from "./utils/id"
 export default function App() {
   const [title, setTitle] = useState("Agregar Producto");
   const [isAdding, setIsAdding] = useState(true);
@@ -22,7 +26,7 @@ export default function App() {
     }
 
     fetchProducts();
-
+    
     return()=>{
       controller.abort(); 
     }
@@ -40,8 +44,7 @@ export default function App() {
         name: data.product,
         description: data.description
       }
-
-      await addProduct(productToAdd)
+      await addProduct (productToAdd)
 
       setProducts((prevProducts) =>[...prevProducts, productToAdd])
     } else {
@@ -61,7 +64,6 @@ export default function App() {
       setTitle('Agregar Producto')
     }
     event.target.reset()
-
   }
 
   const handleEdit = (product)=>{
@@ -84,14 +86,13 @@ export default function App() {
       <div className={styles.container}>
         <section className={styles.formContainer}>
           <Form 
-            handleSubmit={handleSubmit}
-            isAdding={isAdding}
-            productEditing={productEditing} 
-          />
+          handleSubmit={handleSubmit}
+          isAdding={isAdding}
+          productEditing={productEditing}/>
         </section>
-
         <section className={styles.tableContainer}>
           <h3>Productos</h3>
+
           <TableOfProducts 
             products={products}
             handleEdit={handleEdit}

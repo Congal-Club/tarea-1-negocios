@@ -6,7 +6,7 @@
     box-shadow: 0 3px 2px rgba(0, 0, 0, 0.2);
 }
 
-.formTitle{
+.formTitle {
     padding: 1rem;
     border-top-right-radius: 0.5rem;
     border-top-left-radius: 0.5rem;
@@ -14,7 +14,6 @@
     color: #fff;
     font-size: 1.5rem;
     text-align: center;
-
 }
 
 .formContent{
@@ -26,18 +25,17 @@
     flex-flow: column nowrap;
     width: 100%;
     gap: 0.25rem;
-    align-items: start;
+    align-items:start ;
     justify-content: center;
     margin-bottom: 1rem;
 }
 
-.label{
+.label {
     font-size: 1rem;
     color: #25292e;
-
 }
 
-.input{
+.input {
     display: inline-block;
     width: 100%;
     padding: 0.5rem;
@@ -62,7 +60,7 @@
     transition: all 0.2s ease-in-out;
 }
 
-.button:hover{
+.buttom:hover {
     cursor: pointer;
     transform: translateY(-1.5px);
     box-shadow: 0 5px 2px rgba(0, 0, 0, 0.35);

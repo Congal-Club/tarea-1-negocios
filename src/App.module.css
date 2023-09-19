@@ -18,14 +18,10 @@
     gap: 2rem;
 }
 
-.formContainer{
+.formContainer {
     flex-basis: 40%;
 }
-
 
 .tableContainer{
     flex: 1;
-}
-.formContainer{
-    flex-basis: 40%;
 }
