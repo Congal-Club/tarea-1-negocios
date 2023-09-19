@@ -1,4 +1,4 @@
-export function generateId (long) {
+export function generateId(long) {
   const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
   let id = ''
 
