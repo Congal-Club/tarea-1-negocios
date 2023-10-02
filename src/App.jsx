@@ -1,7 +1,5 @@
 import styles from './App.module.css'
-
 import { useState, useEffect } from 'react'
-
 import Form from './components/Form'
 import TableOfProducts from './components/TableOfProducts'
 import { addProduct, deleteProduct, getProducts, updateProduct } from './services/product-service'
