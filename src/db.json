@@ -3,26 +3,22 @@
     {
       "id": "cgklVa",
       "name": "Cerveza Napoli",
-      "description": "La peor cerveza italiana",
-      "price": 25
+      "description": "La peor cerveza italiana"
     },
     {
       "id": "renZWL",
       "name": "Burritos",
-      "description": "Burritos belicos",
-      "price": 13
+      "description": "Burritos belicos"
     },
     {
       "id": "uLwzQd",
       "name": "Chiva Cola",
-      "description": "La mejor soda del mundo",
-      "price": 0.5
+      "description": "La mejor soda del mundo"
     },
     {
-      "id": "NSoROQ",
-      "name": "Squirt",
-      "description": "Refresco sabor limón",
-      "price": "15"
+      "id": "RKQMqr",
+      "name": "La bella",
+      "description": "Porta"
     }
   ]
 }
