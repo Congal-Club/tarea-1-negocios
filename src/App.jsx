@@ -36,7 +36,8 @@ export default function App() {
       const productToAdd = {
         id: generateId(6),
         name: data.product,
-        description: data.description
+        description: data.description,
+        price: data.price
       }
 
       await addProduct(productToAdd)
@@ -50,7 +51,8 @@ export default function App() {
           return {
             ...product,
             name: data.product,
-            description: data.description
+            description: data.description,
+            price: data.price
           }
         }
 
