@@ -10,7 +10,6 @@ export default function TableOfProducts({ products, handleEdit, handleDelete }) 
         <tr>
           <th>ID</th>
           <th>Nombre</th>
-          <th>Precio</th>
           <th>Descripcion</th>
           <th>Editar</th>
           <th>Borrar</th>
@@ -22,7 +21,6 @@ export default function TableOfProducts({ products, handleEdit, handleDelete }) 
           <tr key={product.id}>
             <td>{product.id}</td>
             <td>{product.name}</td>
-            <td>{product.price}</td>
             <td>{product.description}</td>
             <td>
               <button className={styles.iconButton} onClick={() => handleEdit(product)}>

@@ -19,18 +19,6 @@ export default function Form({ handleSubmit, isAdding, productEditing }) {
         </div>
 
         <div className={styles.formGroup}>
-          <label className={styles.label} htmlFor='price'>Precio</label>
-          <input
-            className={styles.input}
-            type='number'
-            id='price'
-            name='price'
-            placeholder='Precio...'
-            defaultValue={isAdding ? '' : productEditing.price}
-          />
-        </div>
-
-        <div className={styles.formGroup}>
           <label className={styles.label} htmlFor='description'>Descripción</label>
           <textarea
             className={styles.input}

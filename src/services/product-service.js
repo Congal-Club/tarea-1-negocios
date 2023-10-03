@@ -29,8 +29,7 @@ export async function updateProduct(product, data) {
     body: JSON.stringify({
       id: product.id,
       name: data.product,
-      description: data.description,
-      price: data.price
+      description: data.description
     })
   })
 }
