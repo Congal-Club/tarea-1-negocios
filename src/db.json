@@ -1,24 +1,19 @@
 {
   "products": [
     {
-      "id": "cgklVa",
-      "name": "Cerveza Napoli",
-      "description": "La peor cerveza italiana"
+      "id": "J4MJGU",
+      "name": "Vaca Cebu",
+      "description": "Vaca Cebu con una muy buena calidad de carne, excelente para crianza"
     },
     {
-      "id": "renZWL",
-      "name": "Burritos",
-      "description": "Burritos belicos"
+      "id": "KHFCeL",
+      "name": "Vaca Pinta",
+      "description": "Vaca Pinta lechera, produce entre 20 y 30 L de leche por día, buena calidad de carne, excelente para establos y ganaderías."
     },
     {
-      "id": "uLwzQd",
-      "name": "Chiva Cola",
-      "description": "La mejor soda del mundo"
-    },
-    {
-      "id": "RKQMqr",
-      "name": "La bella",
-      "description": "Porta"
+      "id": "P8WZFo",
+      "name": "Toro Charolais",
+      "description": "Toro Charolais, peso entre 800 y 1200 KG, de las mejores calidades de carne, buen semental y excelente para la producción en ganaderías "
     }
   ]
 }
