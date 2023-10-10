@@ -1,19 +1,29 @@
 {
   "products": [
     {
-      "id": "J4MJGU",
-      "name": "Vaca Cebu",
-      "description": "Vaca Cebu con una muy buena calidad de carne, excelente para crianza"
+      "id": "X8QxcB",
+      "name": "Vaca Jersey",
+      "description": "Raza de ganado vacuno británico productor de leche, de pelaje marrón claro, es famosa por el alto contenido graso de su leche y por la docilidad de sus vacas."
     },
     {
-      "id": "KHFCeL",
-      "name": "Vaca Pinta",
-      "description": "Vaca Pinta lechera, produce entre 20 y 30 L de leche por día, buena calidad de carne, excelente para establos y ganaderías."
+      "id": "MXkBbu",
+      "name": "Gallina",
+      "description": "El tamaño de su cuerpo es pequeño. El color del plumaje es variado, los huevos son de color blanco y azules\nVaca charolais\n"
     },
     {
-      "id": "P8WZFo",
-      "name": "Toro Charolais",
-      "description": "Toro Charolais, peso entre 800 y 1200 KG, de las mejores calidades de carne, buen semental y excelente para la producción en ganaderías "
+      "id": "0Wpql6",
+      "name": "Vaca charolais",
+      "description": "Los toros adultos pesan 900 a 1250 kg y las vacas de 560 a 950 kg."
+    },
+    {
+      "name": "Toro",
+      "description": "Toro de 900 a 1250kg",
+      "id": "v3UV5IN"
+    },
+    {
+      "id": "5",
+      "name": "Toro",
+      "description": "Toro de 900 a 1250kg"
     }
   ]
 }

@@ -34,7 +34,7 @@ export default function App() {
 
     if (isAdding) {
       const productToAdd = {
-        id: generateId(6),
+        id: data.id,
         name: data.product,
         description: data.description
       }

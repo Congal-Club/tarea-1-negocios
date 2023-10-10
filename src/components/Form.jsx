@@ -6,6 +6,19 @@ export default function Form({ handleSubmit, isAdding, productEditing }) {
       <h3 className={styles.formTitle}>Información del Producto</h3>
 
       <div className={styles.formContent}>
+
+      <div className={styles.formGroup}>
+          <label className={styles.label} htmlFor='id'>ID</label>
+          <input
+            className={styles.input}
+            type='number'
+            id='id'
+            name='id'
+            placeholder='ID...'
+            defaultValue={isAdding ? '' : productEditing.id}
+          />
+        </div>
+
         <div className={styles.formGroup}>
           <label className={styles.label} htmlFor='product'>Producto</label>
           <input
